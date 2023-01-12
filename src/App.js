@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import logo from "./assets/fb_logo.svg";
 
 function App() {
+  const inputRef = useRef();
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
+
   return (
     <>
       <div className="flex items-center justify-center h-screen bg-gray-100">
@@ -16,6 +21,7 @@ function App() {
             type="text"
             placeholder="Mobile number or email address"
             className="px-4 h-12 border-2 w-full outline-blue-400 rounded-md"
+            ref={inputRef}
           />
           <input
             type="password"

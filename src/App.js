@@ -1,7 +1,8 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import logo from "./assets/fb_logo.svg";
 
 function App() {
+  
   const inputRef = useRef();
   useEffect(() => {
     inputRef.current.focus();
